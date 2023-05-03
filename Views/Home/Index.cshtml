@@ -1,0 +1,47 @@
+﻿@model BankTransaction.Models.Transaction
+
+@{
+}
+
+
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <h2>Транзакции</h2>
+<form method="post" action="Create">
+    <div class="mb-3">
+        <label for="" class="form-label">Номер Аккаунта</label>
+        <input type="number" class="form-control" asp-for="AccountName">
+    </div>
+     <div class="mb-3">
+     <label for="" class="form-label">Бенефециар</label>
+        <input type="text" class="form-control" asp-for="Benefeciary">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Наименование Банка</label>
+        <input type="text" class="form-control" asp-for="BankName">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Сумма</label>
+        <input type="number" class="form-control" asp-for="Summa">
+    </div>
+            <div class="row mt-2">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input asp-controller="BankTransactions" asp-action="Create" type="submit" value="Отправить" class="btn btn-primary w-100" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <a asp-controller="BankTransactions" asp-action="Index" class="btn btn-secondary  w-100">История</a>
+                </div>
+            </div>
+</form>
+    </div>
+</div>
+
+
+
+
+
+
+
+

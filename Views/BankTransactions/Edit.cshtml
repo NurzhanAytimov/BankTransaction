@@ -1,0 +1,35 @@
+﻿@model BankTransaction.Models.Transaction
+@{
+}
+
+<h1>Редактировать</h1>
+<form method="post" asp-controller="BankTransactions" asp-action="Edit">
+    <div class="mb-3">
+        <label for="" class="form-label">ИД</label>
+        <input type="number" class="form-control" asp-for="Id" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Имя</label>
+        <input type="number" class="form-control" asp-for="AccountName">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Фамилия</label>
+        <input type="text" class="form-control" asp-for="Benefeciary">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Email</label>
+        <input type="text" class="form-control" asp-for="BankName">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Зарплата</label>
+        <input type="number" class="form-control" asp-for="Summa">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Департамент</label>
+        <input type="text" class="form-control" asp-for="Date">
+    </div>
+   
+    <button type="submit" class="btn btn-primary">Сохранить</button>
+    <button asp-controller="BankTransactions" asp-action="Index" type="submit" class="btn btn-secondary">Назад</button>
+</form>
+
